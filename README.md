@@ -25,6 +25,18 @@ LangGraph allows you to define dynamic, branching, and looping workflows for LLM
 ## 📦 Setup
 
 ```bash
+# Clone the repo
 git clone https://github.com/yourusername/langgraph-experiments.git
 cd langgraph-experiments
-pip install -r requirements.txt
+
+# Create and activate virtual environment using uv
+uv venv .venv
+source .venv/bin/activate  # macOS/Linux
+# .venv\Scripts\activate     # Windows
+
+# Install dependencies
+uv pip install -r requirements.txt
+
+# (Optional) Add venv to JupyterLab kernel
+uv pip install ipykernel
+python -m ipykernel install --user --name=langgraph-env --display-name "LangGraph (uv venv)"
